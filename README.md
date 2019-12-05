@@ -19,7 +19,7 @@ $ php artisan import:csv /document/record.csv 5
 
 #### PART B
 
-<p align="center"><img src="https://i.imgur.com/XvOrS03.png" width="400"></p>
+<p align="center"><img src="https://i.imgur.com/u3ermq1.png" width="400"></p>
 
 1) A web interface for displaying daily temperature values for the last 7 days
 
