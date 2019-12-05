@@ -31,7 +31,7 @@ $ php artisan import:csv /document/record.csv 5
 #### API endpoints
 
 Return daily temperature records between two dates passed: parameters date ("from" and "to")
-http://127.0.0.1:8000/api/search
+http://127.0.0.1:8000/api/daily
 
 Updating the temperature value for any date that has a record on the system: parameters: ("temperature" and "date") in json format
 http://127.0.0.1:8000/update
