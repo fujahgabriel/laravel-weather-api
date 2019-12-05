@@ -1,0 +1,71 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon>cloud</mat-icon>
+    </button>
+    <h1>{{ title }}</h1>
+    <span class="menu-spacer"></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<!--/.Navbar-->
+<div class="container">
+  <header class="jumbotron my-4 cloud">
+    <h1>Weather Widget</h1>
+  </header>
+</div>
+
+<!-- Page Content -->
+<div class="container mt-4 ">
+  <div class="row">
+    <mat-spinner class="center" *ngIf="spinner"></mat-spinner>
+    <ng-container>
+      <div class="col-md-12  mb-4">
+        <p>Modify the temperature for a given date</p>
+        <hr>
+        <p>{{message}}</p>
+        <form class="form-inline" [formGroup]="auth" (ngSubmit)="updateTemp()">
+          <div class="form-group col-md-5">
+            <label>Date</label>
+            <select class="js-example-basic-single"  formControlName="date"required>
+              <option value="2019-12-05">2019-12-05</option>
+              <option value="2019-10-22">2019-10-22</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label>Temperature</label>
+            <input type="number" min="0" max="100" formControlName="temp" placeholder="e.g 30" class="form-control" required />
+          </div>
+          <button mat-raised-button color="primary" >UPDATE</button>
+
+        </form>
+        <hr>
+      </div>
+      <div class="col-md-4 mb-4" *ngFor="let list of temperatures">
+        <mat-card class="weather">
+          <div>
+            <div class="current">
+              <div class="info">
+                <div>&nbsp;</div>
+                <div class="date">{{ list.dateRecorded }}</div>
+                <div class="temp">
+                  {{ list.temperature }} &deg;
+                  <small>{{ list.symbol }}</small>
+                </div>
+                <div class="wind">
+                  <small><small>WIND:</small></small> 22 km/h
+                </div>
+                <div>&nbsp;</div>
+              </div>
+              <div class="icon">
+                <button mat-icon-button>
+                  <mat-icon>cloud</mat-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<router-outlet></router-outlet>

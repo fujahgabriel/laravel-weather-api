@@ -1,0 +1,122 @@
+.mat-flat-button {
+  float: right !important;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end !important;
+}
+.cloud {
+  background: url("https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/cloud/cumulonimbus-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+h1 {
+  color: #fff;
+}
+.menu-spacer {
+  border-bottom: solid thin #fff;
+  height: 1px;
+}
+.mat-card {
+  background: #fff !important;
+  color: #000 !important;
+}
+.mat-list-base .mat-list-item {
+  color: #fff;
+  font-size: 13px;
+}
+.mat-raised-button.mat-small {
+  padding: 4px !important;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  justify-content: center;
+  align-items: center !important;
+}
+
+.weather {
+  display: flex;
+  flex-flow: column wrap;
+  box-shadow: 0px 1px 10px 0px #cfcfcf;
+  overflow: hidden;
+}
+
+.weather .current {
+  display: flex;
+  flex-flow: row wrap;
+  background-image: url("https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-size: cover;
+  background-repeat: repeat-x;
+  color: white;
+  padding: 20px;
+  text-shadow: 1px 1px #f68d2e;
+}
+
+.weather .current .info {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  flex-grow: 2;
+}
+
+.weather .current .info .city {
+  font-size: 26px;
+}
+
+.weather .current .info .temp {
+  font-size: 66px;
+}
+
+.weather .current .info .wind {
+  font-size: 24px;
+}
+
+.weather .current .icon {
+  text-align: center;
+  font-size: 64px;
+  flex-grow: 1;
+  margin-top:-30px;
+}
+
+.weather .future {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.weather .future .day {
+  flex-grow: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.weather .future .day:hover {
+  color: #fff;
+  background-color: #f68d2e;
+}
+
+.weather .future .day h3 {
+  text-transform: uppercase;
+}
+
+.weather .future .day p {
+  font-size: 28px;
+}
+.form-inline .form-control, select {
+    display: inline-block;
+    width: 55% !important;
+    margin: 5px;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+select {
+    display: inline-block;
+    width: 55% !important;
+    margin-left: 10px !important;
+    line-height: 40px;
+    height: 60px !important;
+    vertical-align: middle;
+}
