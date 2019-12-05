@@ -6,7 +6,9 @@ use App\Temperature;
 
 class ImportCsvIO
 {
-
+    /**
+     * format data in csv to array for storage 
+     */
     public static function csvToArray($filename = '', $delimiter = ',')
     {
         if (!file_exists($filename) || !is_readable($filename))
@@ -28,7 +30,9 @@ class ImportCsvIO
 
         return $data;
     }
-
+    /**
+     * import csv and store to database
+     */
     public static function importCsv($filePath, $noRows)
     {
 

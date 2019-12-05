@@ -26,16 +26,14 @@
         <form class="form-inline" [formGroup]="auth" (ngSubmit)="updateTemp()">
           <div class="form-group col-md-5">
             <label>Date</label>
-            <select class="js-example-basic-single"  formControlName="date"required>
-              <option value="2019-12-05">2019-12-05</option>
-              <option value="2019-10-22">2019-10-22</option>
-            </select>
+            <input type="date" formControlName="date" class="form-control" required />
           </div>
           <div class="form-group col-md-6">
             <label>Temperature</label>
-            <input type="number" min="0" max="100" formControlName="temp" placeholder="e.g 30" class="form-control" required />
+            <input type="number" min="0" max="100" formControlName="temp" placeholder="e.g 30" class="form-control"
+              required />
           </div>
-          <button mat-raised-button color="primary" >UPDATE</button>
+          <button mat-raised-button color="primary">UPDATE</button>
 
         </form>
         <hr>
